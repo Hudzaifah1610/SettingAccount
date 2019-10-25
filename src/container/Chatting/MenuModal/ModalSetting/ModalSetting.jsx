@@ -28,6 +28,7 @@ class ModalSetting extends Component {
                   class="close"
                   data-dismiss="modal"
                   aria-label="Close"
+                  style={{color: "white"}}
                 >
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -89,17 +90,17 @@ class ModalSetting extends Component {
               <div class="modal-footer">
                 <button
                   type="button"
+                  class="btn btn-primary bton-cancel shadow-none"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="button"
                   class="btn btn-secondary bton-close shadow-none"
                 >
                   Edit
                 </button>
                 <script src=""></script>
-                <button
-                  type="button"
-                  class="btn btn-primary bton-cancel shadow-none"
-                >
-                  Cancel
-                </button>
               </div>
             </div>
           </div>

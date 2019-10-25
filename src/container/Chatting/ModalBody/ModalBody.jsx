@@ -1,6 +1,7 @@
 import React from "react";
 import "./ModalBody.css";
 import ModalSetting from "../MenuModal/ModalSetting/ModalSetting";
+import ModalContact from "../MenuModal/ModalContact/ModalContact";
 
 const ModalBody = ({modalLogOut, onClick}) => {
   return (
@@ -14,10 +15,11 @@ const ModalBody = ({modalLogOut, onClick}) => {
           <i className="fa fa-star"></i>
           <p>Privacy</p>
         </div>
-        <div className="row inbox">
-          <i className="fa fa-envelope"></i>
-          <p>Email</p>
+        <div className="row inbox"  data-toggle="modal" data-target="#contact">
+          <i className="fa fa-user-plus"></i>
+          <p className="pe-add">Friends</p>
         </div>
+        <ModalContact/>
         <div className="row inbox"  data-toggle="modal" data-target="#modalsetting">
           <i className="fa fa-cog"></i>
           <p>Setting</p>

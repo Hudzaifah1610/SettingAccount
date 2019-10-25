@@ -39,7 +39,7 @@ const Navbar = () => {
               </a>
             {/* <Link to="/register"> */}
               <a className="nav-item nav-link mar-left nounderline" href="##">
-                Gallery
+                More
               </a>
             {/* </Link> */}
             {/* <Link to="/chat"> */}

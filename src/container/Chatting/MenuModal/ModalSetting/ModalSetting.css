@@ -45,6 +45,7 @@
 /* Styling Header ModalSetting */
 .modalsett .modal-header h5 {
   font-family: "Viga";
+  color: white;
 }
 /* Styling Form-Edit */
 .modalsett .modal-body label {

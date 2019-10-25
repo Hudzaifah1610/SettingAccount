@@ -4,6 +4,7 @@ import Navbar from "./Navbar/Navbar";
 import Jumbotron from "./Jumbotron/Jumbotron";
 import About from "./About/About";
 import Features from "./Features/Features";
+import Contact from "./Contact/Contact";
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class LandingPage extends React.Component {
             </div>
             <div className="row jumbotronn">
               <div className="col-lg feat">
-                
+                <Contact/>
               </div>
             </div>
           </div>
