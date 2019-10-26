@@ -1,0 +1,22 @@
+.foterr{
+    margin-top: 150px;
+    border-top: 1px solid rgb(162, 162, 233);
+    padding-top: 10px;
+}
+.foterr .float-left{
+    display: inherit;
+}
+.foterr .float-left p{
+    margin-left: 80px;
+}
+.foterr .col-lg-4{
+    margin-left: 100px;
+    letter-spacing: 2px;
+}
+.foterr p{
+    font-family: "Open Sans" !important;
+    color: grey;
+}
+.foterr .pe-one{
+    margin-left: 130px !important;
+}

@@ -14,6 +14,15 @@
   height: 60px;
   border-radius: 100%;
 }
+/* Styling Fa-plus */
+.modalcontact .fa-plus{
+  float: right;
+  position: absolute;
+  /* top: -10px; */
+  left: 225px;
+  z-index: 99999 !important;
+}
+
 /* Styling Desc-Friend */
 .modalcontact .desc-friend {
   position: relative;
@@ -42,6 +51,7 @@
   background: white;
   z-index: 9999;
   font-family: "Rajdhani";
+  width: 100%;
 }
 /* Stylig Placeholder */
 .modalcontact ::placeholder{

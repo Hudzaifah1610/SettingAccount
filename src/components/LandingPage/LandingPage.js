@@ -5,6 +5,7 @@ import Jumbotron from "./Jumbotron/Jumbotron";
 import About from "./About/About";
 import Features from "./Features/Features";
 import Contact from "./Contact/Contact";
+import Footer from "./Footer/Footer";
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -26,19 +27,24 @@ class LandingPage extends React.Component {
                 <Jumbotron />
               </div>
             </div>
-            <div className="row jumbotronn">
+            <div className="row">
               <div className="col-lg">
                 <About />
               </div>
             </div>
-            <div className="row jumbotronn">
+            <div className="row">
               <div className="col-lg feat">
                 <Features />
               </div>
             </div>
-            <div className="row jumbotronn">
+            <div className="row">
               <div className="col-lg feat">
                 <Contact/>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-lg feat">
+                <Footer/>
               </div>
             </div>
           </div>
