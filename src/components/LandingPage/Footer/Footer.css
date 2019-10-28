@@ -1,22 +1,94 @@
-.foterr{
+.foterr p {
+  font-family: "Open Sans" !important;
+  color: grey;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .foterr .col-lg-4 {
+    letter-spacing: 2px;
+  }
+  .foterr {
+    padding: 20px;
     margin-top: 150px;
-    border-top: 1px solid rgb(162, 162, 233);
-    padding-top: 10px;
-}
-.foterr .float-left{
+    border-top: 2px solid rgb(203, 203, 207);
+    background: linear-gradient(
+      45deg,
+      rgba(72, 44, 191, 0.7) 0%,
+      rgba(106, 198, 240, 1) 100%
+    );
+  }
+  .foterr p {
+    color: white !important;
+  }
+  .foterr .float-left {
     display: inherit;
+  }
+  .foterr .float-left p {
+    margin: auto;
+  }
 }
-.foterr .float-left p{
-    margin-left: 80px;
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
 }
-.foterr .col-lg-4{
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .foterr .col-lg-4 {
+        letter-spacing: 2px;
+      }
+      .foterr {
+        padding-left: 20px;
+        margin-top: 150px;
+        border-top: 2px solid rgb(203, 203, 207);
+        background: linear-gradient(
+          45deg,
+          rgba(72, 44, 191, 0.7) 0%,
+          rgba(106, 198, 240, 1) 100%
+        );
+      }
+      .foterr p {
+        color: white !important;
+      }
+      .foterr .float-left {
+        display: inherit;
+      }
+      .foterr .float-left p {
+        margin: auto;
+      }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .foterr .pe-one {
+    margin-left: 130px !important;
+  }
+  .foterr .col-lg-4 {
     margin-left: 100px;
     letter-spacing: 2px;
-}
-.foterr p{
-    font-family: "Open Sans" !important;
-    color: grey;
-}
-.foterr .pe-one{
-    margin-left: 130px !important;
+  }
+  .foterr {
+    margin-top: 150px;
+    border-top: 2px solid rgb(203, 203, 207);
+    padding-top: 10px;
+    background: linear-gradient(
+      45deg,
+      rgba(72, 44, 191, 0.7) 0%,
+      rgba(106, 198, 240, 1) 100%
+    );
+  }
+  .foterr p {
+    color: white !important;
+  }
+  .foterr .float-left {
+    display: inherit;
+  }
+  .foterr .float-left p {
+    margin-left: 80px;
+  }
 }
