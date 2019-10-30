@@ -83,7 +83,7 @@
     margin-left: 20px !important;
   }
   .nav-land .navbar .navbar-nav .oneee {
-    margin-left: 200px;
+    margin-left: 250px;
   }
   .nav-land .headr img {
     margin-left: 20px !important;
@@ -115,11 +115,12 @@
   z-index: 1;
 }
 .navbar-brand {
-  font-family: "Viga", sans-serif;
-  font-weight: 100 !important;
+  font-family: "Open Sans", serif !important;
+  font-weight: bold !important;
 }
 .navbar .navbar-nav .nav-item {
-  font-family: "Viga", sans-serif;
+  font-family: "Open Sans", serif !important;
+  font-weight: bold !important;
 }
 
 .nav-land img {
@@ -128,8 +129,9 @@
 .nav-land .navbar .signin {
   background: lightblue;
   color: white;
-  font-family: "Viga";
+  font-family: "Open Sans", serif !important;
   padding: 10px 40px;
+  font-weight: bold !important;
   border-radius: 40px;
   border: none;
   margin-right: 20px;

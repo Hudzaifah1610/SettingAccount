@@ -9,7 +9,10 @@ const NavTop = ({
   gambarprofile,
   handleImage,
   handleChangeImage,
-  namaNavTop
+  namaNavTop,
+  onChangeAddFriend,  
+  onSubmitAddFriend,
+  dataUser
 }) => {
   return (
     <div className="navtop">
@@ -90,7 +93,13 @@ const NavTop = ({
                 </nav>
 
                 <div className="modal-body">
-                  <ModalBody modalLogOut={logOut} onClick={handleClickOut} />
+                  <ModalBody 
+                  modalLogOut={logOut} 
+                  onClick={handleClickOut} 
+                  onChangeAddFriend={onChangeAddFriend} 
+                  onSubmitAddFriend={  onSubmitAddFriend}  dataUser={dataUser} />
+
+                
                 </div>
               </div>
             </div>

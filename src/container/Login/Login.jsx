@@ -92,7 +92,6 @@ class Login extends Component {
                           type="text"
                           className="form-control  shadow-none"
                           style={{ fontWeight: "100", fontFamily: "Domine" }}
-                          // id="exampleInputPassword1"
                           placeholder="Name"
                           name="name"
                           value={this.state.name}

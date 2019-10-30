@@ -39,12 +39,12 @@ class LandingPage extends React.Component {
             </div>
             <div className="row">
               <div className="col-lg feat">
-                <Contact/>
+                <Contact />
               </div>
             </div>
             <div className="row">
               <div className="col-lg feat">
-                <Footer/>
+                <Footer />
               </div>
             </div>
           </div>

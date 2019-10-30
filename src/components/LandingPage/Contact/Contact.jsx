@@ -3,7 +3,7 @@ import "./Contact.css";
 
 const Contact = () => {
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <div className="row ">
         <div className="col all-cont">
           <div className="row m-auto">
@@ -20,7 +20,6 @@ const Contact = () => {
             <div className="col-lg-4">
               <div className="icon-contact">
                 <i className="fa fa-phone"></i>
-                {/* <h6>60 Paya Lebar Roa SG, Singapore</h6> */}
                 <h6>+65 93901336</h6>
                 <h6>+65 93901337</h6>
               </div>
@@ -28,9 +27,8 @@ const Contact = () => {
             <div className="col-lg-4">
               <div className="icon-contact">
                 <i className="fa fa-envelope"></i>
-                {/* <h6>60 Paya Lebar Roa SG, Singapore</h6> */}
-                <h6>OSans@gmail.com</h6>
-                <h6>Projekmini@gmail.com</h6>
+                <h6>osans@gmail.com</h6>
+                <h6>projekmini@gmail.com</h6>
               </div>
             </div>
           </div>

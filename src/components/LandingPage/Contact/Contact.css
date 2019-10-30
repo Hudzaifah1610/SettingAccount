@@ -1,5 +1,6 @@
 .contact{
     margin-top: 100px !important;
+    font-family: "Open Sans" !important;
 }
 .contact p{
     margin: auto;
@@ -11,7 +12,7 @@
     color: blue;
     padding: 30px 35px;
     font-size: 28px;
-    margin: 100px 0 0 50px;
+    margin: 100px 0 0 70px;
     border-radius: 100px;
 }
 /* Styling Fa-phone */
@@ -19,7 +20,7 @@
     color: blue;
     padding: 30px 35px;
     font-size: 30px;
-    margin: 100px 0 0 50px;
+    margin: 100px 0 0 70px;
     border-radius: 100px;
 }
 /* Styling Fa-Envelope */
@@ -27,7 +28,7 @@
     color: blue;
     padding: 30px 35px;
     font-size: 30px;
-    margin: 100px 0 0 50px;
+    margin: 100px 0 0 70px;
     border-radius: 100px;
 }
 

@@ -15,7 +15,7 @@
   border-radius: 100%;
 }
 /* Styling Fa-plus */
-.modalcontact .fa-plus{
+.modalcontact .fa-plus {
   float: right;
   position: absolute;
   /* top: -10px; */
@@ -42,7 +42,7 @@
   padding: 15px 0 10px 0 !important;
 }
 .modalcontact .modal-body .all-desc-friend:hover {
-  background: rgb(128, 128, 128, 0.4);
+  /* background: rgb(128, 128, 128, 0.4); */
 }
 /* Styling Input */
 .modalcontact input {
@@ -54,7 +54,7 @@
   width: 100%;
 }
 /* Stylig Placeholder */
-.modalcontact ::placeholder{
+.modalcontact ::placeholder {
   font-family: "Rajdhani";
 }
 
@@ -78,4 +78,42 @@
     rgba(72, 44, 191, 1) 100%
   ) !important;
   color: white;
+}
+
+/* Styling All-modal-Contact */
+
+.modalcontact .all-modal-contact .list {
+  margin-top: 12px;
+  margin-bottom: -20px;
+  padding: 10px 0 10px 5px;
+}
+.modalcontact .all-modal-contact img {
+  position: relative;
+  top: 2px;
+}
+/* Styling Baru */
+.desc-list {
+  margin: 10px 0 0 0 !important;
+}
+.desc-list h5 {
+  position: relative;
+  left: 10px;
+  font-family: "Viga";
+  font-size: 15px;
+}
+
+.desc-list p {
+  position: relative;
+  font-size: 10px;
+  left: 10px;
+}
+
+.desc-list .btn-primary {
+  background: linear-gradient(
+    45deg,
+    rgba(106, 198, 240, 1) 0%,
+    rgba(72, 44, 191, 1) 100%
+  ) !important;
+  border: none;
+  margin: 15px 0 0 50px;
 }

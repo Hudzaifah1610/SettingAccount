@@ -10,6 +10,9 @@ import List from "./List/List";
 import ChatRoom from "./ChatRoom/ChatRoom";
 import Input from "./Input/Input";
 
+import { connect } from "react-redux";
+import { handleAddFriend, handleChangeKontak } from "../../Redux/Action";
+
 class Chatting extends Component {
   constructor(props) {
     super(props);
@@ -19,7 +22,10 @@ class Chatting extends Component {
       isiPesan: [],
       sendChat: "",
       receiver_id: "",
-      isLoading: false
+      isLoading: false,
+      pin: "",
+      addFriend: [],
+      friend_id: ""
     };
   }
 
@@ -28,13 +34,15 @@ class Chatting extends Component {
     const myState = localStorage.getItem("user");
     const dataUSer = JSON.parse(myState);
     this.setState({ user: dataUSer });
+
+    this.props.handleAddFriends(dataUSer);
   }
 
   // ContactList
   componentDidMount() {
     const idUser = this.state.user.id;
     Axios.get(
-      `https://rocky-refuge-01694.herokuapp.com/api/users/${idUser}`
+      `https://rocky-refuge-01694.herokuapp.com/api/show-friend/${idUser}`
     ).then(contactList => {
       console.log("contact", contactList);
       this.setState({
@@ -95,9 +103,18 @@ class Chatting extends Component {
   handleChatRoomClick = tampilContact => {
     const { id } = this.state.user;
     const idContact = tampilContact.id;
-    console.log("Ini yang tamil setelah diklik", tampilContact);
+    const { friend_id } = tampilContact;
+
+    this.props.handleChangeNameContact(tampilContact);
+
+    const timeStamp = new Date();
+
+    console.log("waktuuu", timeStamp);
+
+    console.log("Ini yang tamil setelah diklik", tampilContact.friend_id);
     this.setState({
-      receiver_id: idContact
+      receiver_id: idContact,
+      friend_id
     });
     Axios.get(
       `https://rocky-refuge-01694.herokuapp.com/api/showChat/${id}/${idContact}`
@@ -110,7 +127,7 @@ class Chatting extends Component {
   //  Show Chat
   getChat = async () => {
     const { id } = this.state.user;
-    const idContact = this.state.receiver_id;
+    const idContact = this.state.friend_id;
     await Axios.get(
       `https://rocky-refuge-01694.herokuapp.com/api/showChat/${id}/${idContact}`
     ).then(ress => {
@@ -129,12 +146,14 @@ class Chatting extends Component {
   handleSubmitChat = e => {
     e.preventDefault();
 
-    const { sendChat, user, receiver_id } = this.state;
+    const { sendChat, user, friend_id } = this.state;
     const butuhDataIni = {
       message: sendChat,
       sender_id: user.id,
-      receiver_id
+      receiver_id: friend_id
     };
+
+    console.log(butuhDataIni);
     this.setState({
       isLoading: true
     });
@@ -150,14 +169,19 @@ class Chatting extends Component {
       });
     });
   };
+
+  // Chat Refresh
   componentDidUpdate(prevProps, prevState) {
-    this.getChat();
+    if (prevState) {
+      this.getChat();
+    }
   }
 
   // Keluar
   handleClickOut = () => {
     localStorage.clear("token");
     localStorage.clear("user");
+    window.location.reload();
   };
   render() {
     const { user, contactList, isiPesan, sendChat } = this.state;
@@ -171,7 +195,7 @@ class Chatting extends Component {
     } = this;
 
     if (!localStorage.getItem("token", "user")) {
-      return <Redirect to="/" />;
+      return <Redirect to="/loginn" />;
     }
     return (
       <div className="chatting">
@@ -300,4 +324,15 @@ class Chatting extends Component {
   }
 }
 
-export default Chatting;
+const mapStateToProps = state => ({
+  dataUser: state.dataUser
+});
+
+const mapDispatchToProps = dispatch => ({
+  handleAddFriends: dataUser => dispatch(handleAddFriend(dataUser)),
+  handleChangeNameContact: dataUser => dispatch(handleChangeKontak(dataUser))
+});
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Chatting);

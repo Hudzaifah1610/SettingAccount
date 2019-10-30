@@ -224,7 +224,7 @@ button {
   margin-top: 20px;
   letter-spacing: 3px;
   border-radius: 30px;
-  font-family: "Viga";
+  font-weight: 900 !important;
 }
 .jumbotron button:hover {
   background: linear-gradient(

@@ -1,21 +1,28 @@
-import React from "react";
+import React, {Component} from "react";
 import "./NavTop2.css";
 import mountain from "../../../Image/mountain.jpeg";
+import { connect } from "react-redux";
 
-const NavTop2 = () => {
-  return (
-    <div className="row in-chatt">
-      <div className="col ">
-          <div className="wrapp-nav-all">
-            <img src={mountain} alt="" className="float-left"/>
-            <div className="wrapp-desc">
-          <h5>Abdillah Al-Atsary</h5>
-          <p>Online</p>
-          </div>
+class NavTop2 extends Component {
+  render(){
+
+    return (
+      <div className="row in-chatt">
+        <div className="col ">
+            <div className="wrapp-nav-all">
+              <img src={this.props.contactUser.avatar} alt="" className="float-left"/>
+              <div className="wrapp-desc">
+            <h5>{this.props.contactUser.name}</h5>
+            <p>Online</p>
+            </div>
+            </div>
           </div>
         </div>
-      </div>
-  );
+    );
+  }
 };
 
-export default NavTop2;
+const mapStateToProps = state => ({
+  contactUser : state.kontakUser
+})
+export default connect(mapStateToProps, null)(NavTop2);

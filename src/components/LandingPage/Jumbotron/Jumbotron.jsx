@@ -29,7 +29,7 @@ const Jumbotron = () => {
               With OSans, get the fast, simple and secure messaging and calling
               application for free
             </p>
-            <Link to="/login">
+            <Link to="/register">
               <button type="button" className="btn btn-outline-primary">
                 JOIN US
               </button>
